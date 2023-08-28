@@ -16,23 +16,11 @@ import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 import { JsonFilter } from "../../util/JsonFilter";
-import { IntFilter } from "../../util/IntFilter";
 import { TripListRelationFilter } from "../../trip/base/TripListRelationFilter";
 import { WishlistListRelationFilter } from "../../wishlist/base/WishlistListRelationFilter";
 
 @InputType()
 class ListingWhereInput {
-  @ApiProperty({
-    required: false,
-    type: StringFilter,
-  })
-  @Type(() => StringFilter)
-  @IsOptional()
-  @Field(() => StringFilter, {
-    nullable: true,
-  })
-  description?: StringFilter;
-
   @ApiProperty({
     required: false,
     type: StringFilter,
@@ -109,7 +97,7 @@ class ListingWhereInput {
   @Field(() => JsonFilter, {
     nullable: true,
   })
-  placeAmeneites?: JsonFilter;
+  placeAmenities?: JsonFilter;
 
   @ApiProperty({
     required: false,
@@ -131,29 +119,7 @@ class ListingWhereInput {
   @Field(() => StringFilter, {
     nullable: true,
   })
-  placetype?: StringFilter;
-
-  @ApiProperty({
-    required: false,
-    type: IntFilter,
-  })
-  @Type(() => IntFilter)
-  @IsOptional()
-  @Field(() => IntFilter, {
-    nullable: true,
-  })
-  price?: IntFilter;
-
-  @ApiProperty({
-    required: false,
-    type: StringFilter,
-  })
-  @Type(() => StringFilter)
-  @IsOptional()
-  @Field(() => StringFilter, {
-    nullable: true,
-  })
-  title?: StringFilter;
+  placeType?: StringFilter;
 
   @ApiProperty({
     required: false,

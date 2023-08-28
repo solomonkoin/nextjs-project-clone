@@ -19,7 +19,6 @@ export const ListingShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
-        <TextField label="description" source="description" />
         <TextField label="ID" source="id" />
         <ReferenceField
           label="listingCreatedBy"
@@ -32,11 +31,9 @@ export const ListingShow = (props: ShowProps): React.ReactElement => {
         <TextField label="locationType" source="locationType" />
         <TextField label="mapData" source="mapData" />
         <TextField label="photos" source="photos" />
-        <TextField label="placeAmeneites" source="placeAmeneites" />
+        <TextField label="placeAmenities" source="placeAmenities" />
         <TextField label="placeSpace" source="placeSpace" />
-        <TextField label="placetype" source="placetype" />
-        <TextField label="price" source="price" />
-        <TextField label="title" source="title" />
+        <TextField label="placeType" source="placeType" />
         <DateField source="updatedAt" label="Updated At" />
         <ReferenceManyField reference="Trip" target="listingId" label="trips">
           <Datagrid rowClick="show">
@@ -49,7 +46,7 @@ export const ListingShow = (props: ShowProps): React.ReactElement => {
             >
               <TextField source={LISTING_TITLE_FIELD} />
             </ReferenceField>
-            <TextField label="tripData" source="tripData" />
+            <TextField label="tripinfo" source="tripinfo" />
             <DateField source="updatedAt" label="Updated At" />
             <ReferenceField label="user" source="user.id" reference="User">
               <TextField source={USER_TITLE_FIELD} />

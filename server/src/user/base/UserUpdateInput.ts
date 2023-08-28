@@ -11,7 +11,12 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, ValidateNested } from "class-validator";
+import {
+  IsString,
+  IsOptional,
+  ValidateNested,
+  IsNumber,
+} from "class-validator";
 import { ListingUpdateManyWithoutUsersInput } from "./ListingUpdateManyWithoutUsersInput";
 import { Type } from "class-transformer";
 import { IsJSONValue } from "@app/custom-validators";
@@ -22,6 +27,17 @@ import { WishlistUpdateManyWithoutUsersInput } from "./WishlistUpdateManyWithout
 
 @InputType()
 class UserUpdateInput {
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  description?: string;
+
   @ApiProperty({
     required: false,
     type: String,
@@ -69,6 +85,17 @@ class UserUpdateInput {
 
   @ApiProperty({
     required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  price?: number;
+
+  @ApiProperty({
+    required: false,
   })
   @IsJSONValue()
   @IsOptional()
@@ -76,6 +103,17 @@ class UserUpdateInput {
     nullable: true,
   })
   roles?: InputJsonValue;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  title?: string;
 
   @ApiProperty({
     required: false,

@@ -11,8 +11,8 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, ValidateNested, IsInt } from "class-validator";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
+import { ValidateNested, IsOptional, IsString } from "class-validator";
 import { Type } from "class-transformer";
 import { IsJSONValue } from "@app/custom-validators";
 import { GraphQLJSON } from "graphql-type-json";
@@ -22,17 +22,6 @@ import { WishlistUpdateManyWithoutListingsInput } from "./WishlistUpdateManyWith
 
 @InputType()
 class ListingUpdateInput {
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  description?: string;
-
   @ApiProperty({
     required: false,
     type: () => UserWhereUniqueInput,
@@ -94,7 +83,7 @@ class ListingUpdateInput {
   @Field(() => GraphQLJSON, {
     nullable: true,
   })
-  placeAmeneites?: InputJsonValue;
+  placeAmenities?: InputJsonValue;
 
   @ApiProperty({
     required: false,
@@ -115,29 +104,7 @@ class ListingUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  placetype?: string;
-
-  @ApiProperty({
-    required: false,
-    type: Number,
-  })
-  @IsInt()
-  @IsOptional()
-  @Field(() => Number, {
-    nullable: true,
-  })
-  price?: number;
-
-  @ApiProperty({
-    required: false,
-    type: String,
-  })
-  @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  title?: string;
+  placeType?: string;
 
   @ApiProperty({
     required: false,

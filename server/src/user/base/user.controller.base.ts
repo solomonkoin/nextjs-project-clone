@@ -60,10 +60,13 @@ export class UserControllerBase {
       data: data,
       select: {
         createdAt: true,
+        description: true,
         firstName: true,
         id: true,
         lastName: true,
+        price: true,
         roles: true,
+        title: true,
         updatedAt: true,
         username: true,
       },
@@ -88,10 +91,13 @@ export class UserControllerBase {
       ...args,
       select: {
         createdAt: true,
+        description: true,
         firstName: true,
         id: true,
         lastName: true,
+        price: true,
         roles: true,
+        title: true,
         updatedAt: true,
         username: true,
       },
@@ -117,10 +123,13 @@ export class UserControllerBase {
       where: params,
       select: {
         createdAt: true,
+        description: true,
         firstName: true,
         id: true,
         lastName: true,
+        price: true,
         roles: true,
+        title: true,
         updatedAt: true,
         username: true,
       },
@@ -155,10 +164,13 @@ export class UserControllerBase {
         data: data,
         select: {
           createdAt: true,
+          description: true,
           firstName: true,
           id: true,
           lastName: true,
+          price: true,
           roles: true,
+          title: true,
           updatedAt: true,
           username: true,
         },
@@ -192,10 +204,13 @@ export class UserControllerBase {
         where: params,
         select: {
           createdAt: true,
+          description: true,
           firstName: true,
           id: true,
           lastName: true,
+          price: true,
           roles: true,
+          title: true,
           updatedAt: true,
           username: true,
         },
@@ -227,7 +242,6 @@ export class UserControllerBase {
       ...query,
       select: {
         createdAt: true,
-        description: true,
         id: true,
 
         listingCreatedBy: {
@@ -240,11 +254,9 @@ export class UserControllerBase {
         locationType: true,
         mapData: true,
         photos: true,
-        placeAmeneites: true,
+        placeAmenities: true,
         placeSpace: true,
-        placetype: true,
-        price: true,
-        title: true,
+        placeType: true,
         updatedAt: true,
       },
     });
@@ -347,7 +359,7 @@ export class UserControllerBase {
           },
         },
 
-        tripData: true,
+        tripinfo: true,
         updatedAt: true,
 
         user: {

@@ -11,13 +11,7 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import {
-  IsDate,
-  IsString,
-  ValidateNested,
-  IsInt,
-  IsOptional,
-} from "class-validator";
+import { IsDate, IsString, ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
 import { User } from "../../user/base/User";
 import { IsJSONValue } from "@app/custom-validators";
@@ -35,14 +29,6 @@ class Listing {
   @Type(() => Date)
   @Field(() => Date)
   createdAt!: Date;
-
-  @ApiProperty({
-    required: true,
-    type: String,
-  })
-  @IsString()
-  @Field(() => String)
-  description!: string;
 
   @ApiProperty({
     required: true,
@@ -94,7 +80,7 @@ class Listing {
   })
   @IsJSONValue()
   @Field(() => GraphQLJSON)
-  placeAmeneites!: JsonValue;
+  placeAmenities!: JsonValue;
 
   @ApiProperty({
     required: true,
@@ -109,23 +95,7 @@ class Listing {
   })
   @IsString()
   @Field(() => String)
-  placetype!: string;
-
-  @ApiProperty({
-    required: true,
-    type: Number,
-  })
-  @IsInt()
-  @Field(() => Number)
-  price!: number;
-
-  @ApiProperty({
-    required: true,
-    type: String,
-  })
-  @IsString()
-  @Field(() => String)
-  title!: string;
+  placeType!: string;
 
   @ApiProperty({
     required: false,

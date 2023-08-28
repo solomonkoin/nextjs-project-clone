@@ -69,7 +69,7 @@ export class TripControllerBase {
           },
         },
 
-        tripData: true,
+        tripinfo: true,
         updatedAt: true,
 
         user: {
@@ -104,10 +104,10 @@ export class TripControllerBase {
         listing: {
           select: {
             id: true,
-            title: true,
           },
         },
-        tripData: true,
+
+        tripinfo: true,
         updatedAt: true,
 
         user: {
@@ -146,7 +146,7 @@ export class TripControllerBase {
           },
         },
 
-        tripData: true,
+        tripinfo: true,
         updatedAt: true,
 
         user: {
@@ -204,7 +204,7 @@ export class TripControllerBase {
             },
           },
 
-          tripData: true,
+          tripinfo: true,
           updatedAt: true,
 
           user: {
@@ -251,7 +251,7 @@ export class TripControllerBase {
             },
           },
 
-          tripData: true,
+          tripinfo: true,
           updatedAt: true,
 
           user: {

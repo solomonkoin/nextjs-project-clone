@@ -19,10 +19,13 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="description" source="description" />
         <TextField label="First Name" source="firstName" />
         <TextField label="ID" source="id" />
         <TextField label="Last Name" source="lastName" />
+        <TextField label="price" source="price" />
         <TextField label="Roles" source="roles" />
+        <TextField label="title" source="title" />
         <DateField source="updatedAt" label="Updated At" />
         <TextField label="Username" source="username" />
         <ReferenceManyField
@@ -32,7 +35,6 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
         >
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
-            <TextField label="description" source="description" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="listingCreatedBy"
@@ -45,11 +47,9 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
             <TextField label="locationType" source="locationType" />
             <TextField label="mapData" source="mapData" />
             <TextField label="photos" source="photos" />
-            <TextField label="placeAmeneites" source="placeAmeneites" />
+            <TextField label="placeAmenities" source="placeAmenities" />
             <TextField label="placeSpace" source="placeSpace" />
-            <TextField label="placetype" source="placetype" />
-            <TextField label="price" source="price" />
-            <TextField label="title" source="title" />
+            <TextField label="placeType" source="placeType" />
             <DateField source="updatedAt" label="Updated At" />
           </Datagrid>
         </ReferenceManyField>
@@ -64,7 +64,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
             >
               <TextField source={LISTING_TITLE_FIELD} />
             </ReferenceField>
-            <TextField label="tripData" source="tripData" />
+            <TextField label="tripinfo" source="tripinfo" />
             <DateField source="updatedAt" label="Updated At" />
             <ReferenceField label="user" source="user.id" reference="User">
               <TextField source={USER_TITLE_FIELD} />
