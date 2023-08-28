@@ -239,10 +239,9 @@ export class UserControllerBase {
         locationData: true,
         locationType: true,
         mapData: true,
-        photos: true,
-        placeAmeneites: true,
+        placeAmenities: true,
         placeSpace: true,
-        placetype: true,
+        placeType: true,
         price: true,
         title: true,
         updatedAt: true,
@@ -347,7 +346,7 @@ export class UserControllerBase {
           },
         },
 
-        tripData: true,
+        tripinfo: true,
         updatedAt: true,
 
         user: {
