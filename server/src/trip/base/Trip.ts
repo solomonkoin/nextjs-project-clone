@@ -50,7 +50,7 @@ class Trip {
   })
   @IsJSONValue()
   @Field(() => GraphQLJSON)
-  tripData!: JsonValue;
+  tripinfo!: JsonValue;
 
   @ApiProperty({
     required: true,

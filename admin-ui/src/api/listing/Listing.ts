@@ -11,10 +11,9 @@ export type Listing = {
   locationData: JsonValue;
   locationType: string;
   mapData: JsonValue;
-  photos: JsonValue;
-  placeAmeneites: JsonValue;
+  placeAmenities: JsonValue;
   placeSpace: JsonValue;
-  placetype: string;
+  placeType: string;
   price: number;
   title: string;
   trips?: Array<Trip>;
