@@ -5,18 +5,15 @@ import { Wishlist } from "../wishlist/Wishlist";
 
 export type Listing = {
   createdAt: Date;
-  description: string;
   id: string;
   listingCreatedBy?: User;
   locationData: JsonValue;
   locationType: string;
   mapData: JsonValue;
   photos: JsonValue;
-  placeAmeneites: JsonValue;
+  placeAmenities: JsonValue;
   placeSpace: JsonValue;
-  placetype: string;
-  price: number;
-  title: string;
+  placeType: string;
   trips?: Array<Trip>;
   updatedAt: Date;
   wishlists?: Array<Wishlist>;

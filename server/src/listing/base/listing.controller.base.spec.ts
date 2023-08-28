@@ -20,44 +20,32 @@ const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
-  description: "exampleDescription",
   id: "exampleId",
   locationType: "exampleLocationType",
-  placetype: "examplePlacetype",
-  price: 42,
-  title: "exampleTitle",
+  placeType: "examplePlaceType",
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
-  description: "exampleDescription",
   id: "exampleId",
   locationType: "exampleLocationType",
-  placetype: "examplePlacetype",
-  price: 42,
-  title: "exampleTitle",
+  placeType: "examplePlaceType",
   updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
-    description: "exampleDescription",
     id: "exampleId",
     locationType: "exampleLocationType",
-    placetype: "examplePlacetype",
-    price: 42,
-    title: "exampleTitle",
+    placeType: "examplePlaceType",
     updatedAt: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
-  description: "exampleDescription",
   id: "exampleId",
   locationType: "exampleLocationType",
-  placetype: "examplePlacetype",
-  price: 42,
-  title: "exampleTitle",
+  placeType: "examplePlaceType",
   updatedAt: new Date(),
 };
 

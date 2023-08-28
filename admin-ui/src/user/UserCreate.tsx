@@ -8,6 +8,7 @@ import {
   ReferenceArrayInput,
   SelectArrayInput,
   PasswordInput,
+  NumberInput,
 } from "react-admin";
 
 import { ListingTitle } from "../listing/ListingTitle";
@@ -19,6 +20,7 @@ export const UserCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
+        <TextInput label="description" multiline source="description" />
         <TextInput label="First Name" source="firstName" />
         <TextInput label="Last Name" source="lastName" />
         <ReferenceArrayInput
@@ -30,12 +32,14 @@ export const UserCreate = (props: CreateProps): React.ReactElement => {
           <SelectArrayInput optionText={ListingTitle} />
         </ReferenceArrayInput>
         <PasswordInput label="Password" source="password" />
+        <NumberInput label="price" source="price" />
         <SelectArrayInput
           source="roles"
           choices={ROLES_OPTIONS}
           optionText="label"
           optionValue="value"
         />
+        <TextInput label="title" source="title" />
         <ReferenceArrayInput
           source="trips"
           reference="Trip"
